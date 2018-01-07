@@ -3,29 +3,138 @@
   <head>
     <style>
        #map {
-        height: 400px;
+        height: 800px;
         width: 100%;
        }
     </style>
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+
+        //50.4728365,30.2644229
+        var center = {lat: 50.4728365, lng: 30.3044229};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
+          zoom: 12,
+          center: center
         });
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: center,
           map: map
         });
+
+        var districtBoundary = [
+          {lat: 50.547179, lng: 30.302532},
+          {lat: 50.517882, lng: 30.353687},
+          {lat: 50.515317, lng: 30.362281},
+          {lat: 50.498286, lng: 30.364673},
+          {lat: 50.486273, lng: 30.395315},
+          {lat: 50.458304, lng: 30.395915},
+          {lat: 50.458795, lng: 30.415657},
+          {lat: 50.454752, lng: 30.414112},
+          {lat: 50.446936, lng: 30.400035},
+          {lat: 50.440596, lng: 30.397975},
+          {lat: 50.408115, lng: 30.429561},
+          {lat: 50.398814, lng: 30.417888},
+          {lat: 50.406473, lng: 30.394886},
+          {lat: 50.424194, lng: 30.368106},
+          {lat: 50.434036, lng: 30.361240},
+          {lat: 50.445297, lng: 30.359523},
+          //
+          {lat: 50.442728, lng: 30.321414},
+          {lat: 50.442564, lng: 30.311801},
+          {lat: 50.446936, lng: 30.281589},
+          {lat: 50.443020, lng: 30.281796},
+          {lat: 50.431576, lng: 30.274894},
+          {lat: 50.430482, lng: 30.276353},
+          {lat: 50.426272, lng: 30.269573},
+          {lat: 50.431193, lng: 30.260389},
+          {lat: 50.431220, lng: 30.255153},
+          {lat: 50.427147, lng: 30.251548},
+          {lat: 50.423032, lng: 30.244253},
+          {lat: 50.429457, lng: 30.239875},
+          {lat: 50.432519, lng: 30.239618},
+          {lat: 50.436291, lng: 30.242493},
+          {lat: 50.438628, lng: 30.243137},
+          {lat: 50.439639, lng: 30.246570},
+          {lat: 50.442536, lng: 30.246313},
+          {lat: 50.446848, lng: 30.241334},
+          {lat: 50.449860, lng: 30.239360},
+          {lat: 50.452538, lng: 30.240047},
+          {lat: 50.453843, lng: 30.240862},
+          {lat: 50.462661, lng: 30.248330},
+          {lat: 50.463535, lng: 30.250905},
+          {lat: 50.466499, lng: 30.253780},
+          {lat: 50.468357, lng: 30.257556},
+          {lat: 50.469777, lng: 30.258415},
+          {lat: 50.472181, lng: 30.256698},
+          {lat: 50.474584, lng: 30.249660},
+          {lat: 50.477206, lng: 30.249832},
+          {lat: 50.480156, lng: 30.251720},
+          {lat: 50.483324, lng: 30.251377},
+          {lat: 50.486314, lng: 30.252407},
+          {lat: 50.486887, lng: 30.253522},
+          {lat: 50.486532, lng: 30.255325},
+          {lat: 50.486423, lng: 30.258157},
+          {lat: 50.486669, lng: 30.259058},
+          {lat: 50.485959, lng: 30.259101},
+          {lat: 50.485959, lng: 30.260389},
+          {lat: 50.486450, lng: 30.260389},
+          {lat: 50.486669, lng: 30.261290},
+          {lat: 50.487843, lng: 30.263050},
+          {lat: 50.489317, lng: 30.263479},
+          {lat: 50.492129, lng: 30.265882},
+          {lat: 50.492730, lng: 30.266526},
+          {lat: 50.493849, lng: 30.265195},
+          {lat: 50.498381, lng: 30.270302},
+          {lat: 50.499964, lng: 30.270216},
+          {lat: 50.501657, lng: 30.270431},
+          {lat: 50.503595, lng: 30.269659},
+          {lat: 50.505860, lng: 30.264680},
+          {lat: 50.507825, lng: 30.262148},
+          {lat: 50.509327, lng: 30.261204},
+          {lat: 50.509954, lng: 30.259316},
+          {lat: 50.511646, lng: 30.260603},
+          {lat: 50.511537, lng: 30.261419},
+          {lat: 50.513284, lng: 30.262191},
+          {lat: 50.514621, lng: 30.263393},
+          {lat: 50.516040, lng: 30.265410},
+          {lat: 50.518823, lng: 30.268800},
+          {lat: 50.519969, lng: 30.271976},
+          {lat: 50.520952, lng: 30.272834},
+          {lat: 50.521579, lng: 30.274165},
+          {lat: 50.521388, lng: 30.275967},
+          {lat: 50.521825, lng: 30.279787},
+          {lat: 50.522288, lng: 30.280774},
+          {lat: 50.522179, lng: 30.281460},
+          {lat: 50.523666, lng: 30.284336},
+          {lat: 50.525194, lng: 30.286567},
+          {lat: 50.525249, lng: 30.287812},
+          {lat: 50.527377, lng: 30.291030},
+          {lat: 50.528795, lng: 30.290515},
+          {lat: 50.532724, lng: 30.292919},
+          {lat: 50.533269, lng: 30.300300},
+          {lat: 50.533869, lng: 30.300686},
+          {lat: 50.533378, lng: 30.302575},
+          {lat: 50.543798, lng: 30.304463},
+          {lat: 50.546416, lng: 30.302188},
+          {lat: 50.547179, lng: 30.302532}
+        ];
+        var districtOverlay = new google.maps.Polyline({
+          path: districtBoundary,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 4
+        });
+
+        districtOverlay.setMap(map);
+        
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNMEio-H-7kVrWh9IoyArKsD9_kUBlYUE&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNMEio-H-7kVrWh9IoyArKsD9_kUBlYUE&callback=initMap">
     </script>
   </body>
 </html>
