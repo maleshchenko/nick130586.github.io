@@ -138,6 +138,31 @@
           strokeWeight: 4
         });
 
+        var district88Boundary = [
+          {lat: 50.425858, lng: 30.409631},
+          {lat: 50.419521, lng: 30.400544},
+          {lat: 50.427314, lng: 30.394192},
+          {lat: 50.419603, lng: 30.389686},
+          {lat: 50.420670, lng: 30.385566},
+          {lat: 50.422283, lng: 30.382691},
+          {lat: 50.422966, lng: 30.383635},
+          {lat: 50.429227, lng: 30.386167},
+          {lat: 50.430786, lng: 30.392089},
+          {lat: 50.437835, lng: 30.387750},
+          {lat: 50.438921, lng: 30.391880},
+          {lat: 50.440558, lng: 30.390872},
+          {lat: 50.441836, lng: 30.397556},
+        ]
+
+        var district88Overlay = new google.maps.Polyline({
+          path: district88Boundary,
+          geodesic: true,
+          strokeColor: '#ffff00',
+          strokeOpacity: generalOpacity,
+          strokeWeight: generalStrokeWeight
+        });
+
+
         var district94Boundary = [
           {lat: 50.474250, lng: 30.341162},
           {lat: 50.477691, lng: 30.340605},
@@ -341,6 +366,7 @@
         })
 
         districtOverlay.setMap(map)
+        district88Overlay.setMap(map)
         district94Overlay.setMap(map)
         district95Overlay.setMap(map)
         district96Overlay.setMap(map)
