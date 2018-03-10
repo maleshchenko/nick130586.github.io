@@ -15,13 +15,16 @@
         //50.4728365,30.2644229
         var center = {lat: 50.4728365, lng: 30.3044229};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+          zoom: 14,
           center: center
         })
         var marker = new google.maps.Marker({
           position: center,
           map: map
         })
+
+        var generalStrokeWeight = 3
+        var generalOpacity = 1.0
 
         var districtBoundary = [
           {lat: 50.547179, lng: 30.302532},
@@ -124,7 +127,7 @@
           path: districtBoundary,
           geodesic: true,
           strokeColor: '#FF0000',
-          strokeOpacity: 1.0,
+          strokeOpacity: generalOpacity,
           strokeWeight: 4
         });
 
@@ -151,19 +154,130 @@
           {lat: 50.471328, lng: 30.349816},
           {lat: 50.474413, lng: 30.350303},
           {lat: 50.474659, lng: 30.347686},
-          {lat: 50.474250, lng: 30.341205},
-
+          {lat: 50.474250, lng: 30.341205}
         ]
+
         var district94Overlay = new google.maps.Polyline({
           path: district94Boundary,
           geodesic: true,
           strokeColor: '#FF0000',
           strokeOpacity: 1.0,
-          strokeWeight: 3
+          strokeWeight: generalStrokeWeight
         })
-        
+
+        var district95Boundary = [
+          {lat: 50.479985, lng: 30.395330},
+          {lat: 50.478970, lng: 30.388699},
+          {lat: 50.473945, lng: 30.376941},
+          {lat: 50.475829, lng: 30.374205},
+          {lat: 50.474607, lng: 30.368175},
+          {lat: 50.471869, lng: 30.368583},
+          {lat: 50.469889, lng: 30.366459},
+          {lat: 50.465969, lng: 30.366952},
+          {lat: 50.464488, lng: 30.348037},
+          {lat: 50.462760, lng: 30.347608},
+          {lat: 50.462507, lng: 30.345526},
+          {lat: 50.464228, lng: 30.345269},
+          {lat: 50.463709, lng: 30.337501},
+          {lat: 50.463832, lng: 30.337533},
+          {lat: 50.460304, lng: 30.338075},
+          {lat: 50.461448, lng: 30.330903},
+          {lat: 50.461585, lng: 30.330195},
+          {lat: 50.462111, lng: 30.329884},
+          {lat: 50.462751, lng: 30.328972},
+          {lat: 50.465265, lng: 30.328642},
+          {lat: 50.467031, lng: 30.330672},
+          {lat: 50.467748, lng: 30.332571},
+          {lat: 50.467109, lng: 30.333671},
+          {lat: 50.470073, lng: 30.337061},
+          {lat: 50.469103, lng: 30.339014},
+          {lat: 50.469929, lng: 30.344282},
+          {lat: 50.471350, lng: 30.344432},
+          {lat: 50.471227, lng: 30.349925},
+          {lat: 50.474560, lng: 30.350376},
+          {lat: 50.474806, lng: 30.347533},
+          {lat: 50.474362, lng: 30.341299},
+          {lat: 50.477619, lng: 30.340709},
+          {lat: 50.477817, lng: 30.343123},
+          {lat: 50.476370, lng: 30.343348},
+          {lat: 50.476615, lng: 30.346213},
+          {lat: 50.480152, lng: 30.345591},
+          {lat: 50.479981, lng: 30.343005},
+          {lat: 50.482699, lng: 30.341170},
+          {lat: 50.482681, lng: 30.341098},
+          {lat: 50.482736, lng: 30.343630},
+          {lat: 50.484757, lng: 30.343458},
+          {lat: 50.485521, lng: 30.343930},
+          {lat: 50.486477, lng: 30.345261},
+          {lat: 50.486286, lng: 30.348479},
+          {lat: 50.488743, lng: 30.349080},
+          {lat: 50.489371, lng: 30.345733},
+          {lat: 50.490627, lng: 30.345947},
+          {lat: 50.491863, lng: 30.345572},
+          {lat: 50.494101, lng: 30.346355},
+          {lat: 50.494231, lng: 30.346173},
+          {lat: 50.496381, lng: 30.345647},
+          {lat: 50.496518, lng: 30.344102},
+          {lat: 50.497473, lng: 30.344338},
+          {lat: 50.497739, lng: 30.341924},
+          {lat: 50.497589, lng: 30.341581},
+          {lat: 50.497623, lng: 30.341227},
+          {lat: 50.496572, lng: 30.340862},
+          {lat: 50.496627, lng: 30.340175},
+          {lat: 50.498210, lng: 30.340476},
+          {lat: 50.498224, lng: 30.339446},
+          {lat: 50.496504, lng: 30.339017},
+          {lat: 50.496395, lng: 30.337386},
+          {lat: 50.494402, lng: 30.336828},
+          {lat: 50.494484, lng: 30.334639},
+          {lat: 50.493282, lng: 30.334897},
+          {lat: 50.492491, lng: 30.324983},
+          {lat: 50.503574, lng: 30.299663},
+          {lat: 50.504775, lng: 30.293956},
+          {lat: 50.504093, lng: 30.277905},
+          {lat: 50.505021, lng: 30.271897},
+          {lat: 50.510506, lng: 30.259881}
+        ]
+
+        var district95Overlay = new google.maps.Polyline({
+          path: district95Boundary,
+          geodesic: true,
+          strokeColor: '#00ffff',
+          strokeOpacity: generalOpacity,
+          strokeWeight: generalStrokeWeight
+        })
+
+        var district96Boundary = [
+          {lat: 50.460263, lng: 30.338107},
+          {lat: 50.459997, lng: 30.340275},
+          {lat: 50.460694, lng: 30.340146},
+          {lat: 50.460550, lng: 30.338880},
+          {lat: 50.462681, lng: 30.338494},
+          {lat: 50.463091, lng: 30.342957},
+          {lat: 50.462633, lng: 30.343440},
+          {lat: 50.462681, lng: 30.344405},
+          {lat: 50.462422, lng: 30.344577},
+          {lat: 50.462483, lng: 30.345381},
+          {lat: 50.455072, lng: 30.346508},
+          {lat: 50.455680, lng: 30.356625},
+          {lat: 50.464655, lng: 30.355231},
+          {lat: 50.464259, lng: 30.348364},
+          {lat: 50.462620, lng: 30.347849},
+          {lat: 50.462429, lng: 30.345210}
+        ]
+
+        var district96Overlay = new google.maps.Polyline({
+          path: district96Boundary,
+          geodesic: true,
+          strokeColor: '#DEB887',
+          strokeOpacity: generalOpacity,
+          strokeWeight: generalStrokeWeight
+        })
+
         districtOverlay.setMap(map)
         district94Overlay.setMap(map)
+        district95Overlay.setMap(map)
+        district96Overlay.setMap(map)
         
       }
     </script>
