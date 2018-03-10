@@ -18,6 +18,7 @@
           zoom: 14,
           center: center
         })
+        
         var marker = new google.maps.Marker({
           position: center,
           map: map
@@ -25,6 +26,12 @@
 
         var generalStrokeWeight = 3
         var generalOpacity = 1.0
+
+        /*var label = new google.maps.Marker({
+          position: new google.maps.LatLng(50.54, 30.30),
+          map: map,
+          icon: "/images/myimage.png"
+        });*/
 
         var districtBoundary = [
           {lat: 50.547179, lng: 30.302532},
