@@ -157,7 +157,36 @@
         var district88Overlay = new google.maps.Polyline({
           path: district88Boundary,
           geodesic: true,
-          strokeColor: '#ffff00',
+          strokeColor: '#ffb6c1',
+          strokeOpacity: generalOpacity,
+          strokeWeight: generalStrokeWeight
+        });
+
+        var district89Boundary = [
+          {lat: 50.435402, lng: 30.388265},
+          {lat: 50.433024, lng: 30.377836},
+          {lat: 50.432334, lng: 30.379708},
+          {lat: 50.431551, lng: 30.380813},
+          {lat: 50.432252, lng: 30.383490},
+          {lat: 50.431862, lng: 30.383726},
+          {lat: 50.431018, lng: 30.384440},
+          {lat: 50.430772, lng: 30.383415},
+          {lat: 50.430796, lng: 30.382235},
+          {lat: 50.430191, lng: 30.379467},
+          {lat: 50.431377, lng: 30.378845},
+          {lat: 50.432006, lng: 30.378292},
+          {lat: 50.432563, lng: 30.376919},
+          {lat: 50.432610, lng: 30.375631},
+          {lat: 50.431213, lng: 30.370530},
+          {lat: 50.426798, lng: 30.373845},
+          {lat: 50.431158, lng: 30.390904},
+          {lat: 50.435505, lng: 30.388028}
+        ]
+
+        var district89Overlay = new google.maps.Polyline({
+          path: district89Boundary,
+          geodesic: true,
+          strokeColor: '#7CFC00',
           strokeOpacity: generalOpacity,
           strokeWeight: generalStrokeWeight
         });
@@ -367,11 +396,11 @@
 
         districtOverlay.setMap(map)
         district88Overlay.setMap(map)
+        district89Overlay.setMap(map)
         district94Overlay.setMap(map)
         district95Overlay.setMap(map)
         district96Overlay.setMap(map)
-        district97Overlay.setMap(map)
-        
+        district97Overlay.setMap(map)        
       }
     </script>
     <script async defer
