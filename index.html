@@ -17,11 +17,11 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
           center: center
-        });
+        })
         var marker = new google.maps.Marker({
           position: center,
           map: map
-        });
+        })
 
         var districtBoundary = [
           {lat: 50.547179, lng: 30.302532},
@@ -153,17 +153,17 @@
           {lat: 50.474659, lng: 30.347686},
           {lat: 50.474250, lng: 30.341205},
 
-        ];
+        ]
         var district94Overlay = new google.maps.Polyline({
           path: district94Boundary,
           geodesic: true,
           strokeColor: '#FF0000',
           strokeOpacity: 1.0,
           strokeWeight: 3
-        });
-
-        districtOverlay.setMap(map);
-        district94Overlay.setMap(map);
+        })
+        
+        districtOverlay.setMap(map)
+        district94Overlay.setMap(map)
         
       }
     </script>
