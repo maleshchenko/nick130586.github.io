@@ -12,26 +12,62 @@
     <script>
       function initMap() {
 
-        //50.4728365,30.2644229
-        var center = {lat: 50.4728365, lng: 30.3044229};
+        var center = {lat: 50.4728365, lng: 30.3044229}
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 14,
           center: center
         })
         
-        var marker = new google.maps.Marker({
-          position: center,
-          map: map
-        })
-
         var generalStrokeWeight = 3
         var generalOpacity = 1.0
 
-        /*var label = new google.maps.Marker({
-          position: new google.maps.LatLng(50.54, 30.30),
+        /*var mapLegendImage = new google.maps.Marker({
+          position: center,
           map: map,
-          icon: "/images/myimage.png"
-        });*/
+          icon: "districts.png"
+        })*/
+
+        var label87 = new google.maps.Marker({
+          position: new google.maps.LatLng(50.427529, 30.369394),
+          label: "87",
+          map: map
+        })
+
+        var label88 = new google.maps.Marker({
+          position: new google.maps.LatLng(50.428678, 30.400121),
+          label: "88",
+          map: map
+        })
+
+        var label89 = new google.maps.Marker({
+          position: new google.maps.LatLng(50.432888, 30.384500),
+          label: "89",
+          map: map
+        })
+
+        var label94 = new google.maps.Marker({
+          position: new google.maps.LatLng(50.476278, 30.339439),
+          label: "94",
+          map: map
+        })
+
+        var label95 = new google.maps.Marker({
+          position: new google.maps.LatLng(50.482668, 30.381496),
+          label: "95",
+          map: map
+        })
+
+        var label96 = new google.maps.Marker({
+          position: new google.maps.LatLng(50.460216, 30.351455),
+          label: "96",
+          map: map
+        })
+
+        var label97 = new google.maps.Marker({
+          position: new google.maps.LatLng(50.468685, 30.376947),
+          label: "97",
+          map: map
+        })
 
         var districtBoundary = [
           {lat: 50.547179, lng: 30.302532},
@@ -129,14 +165,14 @@
           {lat: 50.543798, lng: 30.304463},
           {lat: 50.546416, lng: 30.302188},
           {lat: 50.547179, lng: 30.302532}
-        ];
+        ]
         var districtOverlay = new google.maps.Polyline({
           path: districtBoundary,
           geodesic: true,
           strokeColor: '#FF0000',
           strokeOpacity: generalOpacity,
           strokeWeight: 4
-        });
+        })
 
         var district87Boundary = [
           {lat: 50.434527, lng: 30.375647},
@@ -168,7 +204,7 @@
           strokeColor: '#0000ff',
           strokeOpacity: generalOpacity,
           strokeWeight: 4
-        });
+        })
 
         var district88Boundary = [
           {lat: 50.425858, lng: 30.409631},
@@ -191,7 +227,7 @@
           strokeColor: '#ffb6c1',
           strokeOpacity: generalOpacity,
           strokeWeight: generalStrokeWeight
-        });
+        })
 
         var district89Boundary = [
           {lat: 50.437418, lng: 30.386591},
@@ -217,8 +253,7 @@
           strokeColor: '#7CFC00',
           strokeOpacity: generalOpacity,
           strokeWeight: generalStrokeWeight
-        });
-
+        })
 
         var district94Boundary = [
           {lat: 50.474250, lng: 30.341162},
