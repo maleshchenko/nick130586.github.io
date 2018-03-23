@@ -207,7 +207,38 @@
           geodesic: true,
           strokeColor: '#FF0000',
           strokeOpacity: generalOpacity,
-          strokeWeight: 4
+          strokeWeight: 4,
+          map: map
+        })
+
+        var district86Boundary = [
+          {lat: 50.419354, lng: 30.389714},
+          {lat: 50.417416, lng: 30.388384},
+          {lat: 50.416616, lng: 30.389998},
+          {lat: 50.414128, lng: 30.387734},
+          {lat: 50.414805, lng: 30.385578},
+          {lat: 50.414224, lng: 30.384183},
+          {lat: 50.413451, lng: 30.382896},
+          {lat: 50.419009, lng: 30.373873},
+          {lat: 50.422283, lng: 30.378840},
+          {lat: 50.424109, lng: 30.376083},
+          {lat: 50.426337, lng: 30.374527},
+          {lat: 50.428845, lng: 30.384645},
+          {lat: 50.428128, lng: 30.385117},
+          {lat: 50.423172, lng: 30.383121},
+          {lat: 50.422495, lng: 30.382027},
+          {lat: 50.420479, lng: 30.385535},
+          {lat: 50.419939, lng: 30.387048},
+          {lat: 50.419344, lng: 30.389773}
+        ]
+
+        var district86Overlay = new google.maps.Polyline({
+          path: district86Boundary,
+          geodesic: true,
+          strokeColor: '#FFA500',
+          strokeOpacity: generalOpacity,
+          strokeWeight: generalStrokeWeight,
+          map: map
         })
 
         var district87Boundary = [
@@ -239,12 +270,14 @@
           geodesic: true,
           strokeColor: '#0000ff',
           strokeOpacity: generalOpacity,
-          strokeWeight: 4
+          strokeWeight: generalStrokeWeight,
+          map: map
         })
 
         var district88Boundary = [
           {lat: 50.425858, lng: 30.409631},
           {lat: 50.419521, lng: 30.400544},
+          {lat: 50.421077, lng: 30.397975},
           {lat: 50.427314, lng: 30.394192},
           {lat: 50.419603, lng: 30.389686},
           {lat: 50.420670, lng: 30.385566},
@@ -262,7 +295,8 @@
           geodesic: true,
           strokeColor: '#ffb6c1',
           strokeOpacity: generalOpacity,
-          strokeWeight: generalStrokeWeight
+          strokeWeight: generalStrokeWeight,
+          map: map
         })
 
         var district89Boundary = [
@@ -288,7 +322,8 @@
           geodesic: true,
           strokeColor: '#7CFC00',
           strokeOpacity: generalOpacity,
-          strokeWeight: generalStrokeWeight
+          strokeWeight: generalStrokeWeight,
+          map: map
         })
 
         var district94Boundary = [
@@ -320,8 +355,9 @@
           path: district94Boundary,
           geodesic: true,
           strokeColor: '#FF0000',
-          strokeOpacity: 1.0,
-          strokeWeight: generalStrokeWeight
+          strokeOpacity: generalOpacity,
+          strokeWeight: generalStrokeWeight,
+          map: map
         })
 
         var district95Boundary = [
@@ -404,7 +440,8 @@
           geodesic: true,
           strokeColor: '#00ffff',
           strokeOpacity: generalOpacity,
-          strokeWeight: generalStrokeWeight
+          strokeWeight: generalStrokeWeight,
+          map: map
         })
 
         var district96Boundary = [
@@ -430,7 +467,8 @@
           geodesic: true,
           strokeColor: '#DEB887',
           strokeOpacity: generalOpacity,
-          strokeWeight: generalStrokeWeight
+          strokeWeight: generalStrokeWeight,
+          map: map
         })
 
         var district97Boundary = [
@@ -486,17 +524,9 @@
           geodesic: true,
           strokeColor: '#FFCC00',
           strokeOpacity: generalOpacity,
-          strokeWeight: generalStrokeWeight
-        })
-
-        districtOverlay.setMap(map)
-        district87Overlay.setMap(map)
-        district88Overlay.setMap(map)
-        district89Overlay.setMap(map)
-        district94Overlay.setMap(map)
-        district95Overlay.setMap(map)
-        district96Overlay.setMap(map)
-        district97Overlay.setMap(map)        
+          strokeWeight: generalStrokeWeight,
+          map: map
+        })             
       }
     </script>
     <script async defer
