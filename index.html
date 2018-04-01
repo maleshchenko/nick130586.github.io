@@ -112,7 +112,7 @@
         })
 
         var district84Boundary = [
-          {lat: 50.425821, lng: 30.409745},
+          {lat: 50.425621, lng: 30.409500},
           {lat: 50.423422, lng: 30.405410},
           {lat: 50.419409, lng: 30.400427},
           {lat: 50.418678, lng: 30.401500},
@@ -250,7 +250,10 @@
         })
 
         var district88Boundary = [
-          {lat: 50.425752, lng: 30.409498},
+          {lat: 50.441826, lng: 30.397460},
+          {lat: 50.440487, lng: 30.397514},
+          {lat: 50.433400, lng: 30.401956},
+          {lat: 50.425725, lng: 30.409069},
           {lat: 50.423428, lng: 30.405271},
           {lat: 50.419521, lng: 30.400544},
           {lat: 50.421077, lng: 30.397975},
@@ -471,6 +474,39 @@
 
         var district91Overlay = new google.maps.Polyline({
           path: district91Boundary,
+          geodesic: true,
+          strokeColor: '#FFDF00',
+          strokeOpacity: generalOpacity,
+          strokeWeight: generalStrokeWeight,
+          map: map
+        })
+
+        var district92Boundary = [
+          {lat: 50.454963, lng: 30.354062},
+          {lat: 50.453379, lng: 30.354384},
+          {lat: 50.453474, lng: 30.355666},
+          {lat: 50.451846, lng: 30.356084},
+          {lat: 50.451930, lng: 30.357994},
+          {lat: 50.446335, lng: 30.358836},
+          {lat: 50.445925, lng: 30.368675},
+          {lat: 50.444600, lng: 30.369039},
+          {lat: 50.444477, lng: 30.373771},
+          {lat: 50.438399, lng: 30.377965},
+          {lat: 50.438967, lng: 30.381580},
+          {lat: 50.436717, lng: 30.382856},
+          {lat: 50.439060, lng: 30.391460},
+          {lat: 50.440663, lng: 30.390538},
+          {lat: 50.442011, lng: 30.397520},
+          {lat: 50.443256, lng: 30.397227},
+          {lat: 50.447034, lng: 30.399567},
+          {lat: 50.445305, lng: 30.393867},
+          {lat: 50.450240, lng: 30.390128},
+          {lat: 50.457321, lng: 30.388652},
+          {lat: 50.454996, lng: 30.353947}
+        ]
+
+        var district92Overlay = new google.maps.Polyline({
+          path: district92Boundary,
           geodesic: true,
           strokeColor: '#7CFC00',
           strokeOpacity: generalOpacity,
